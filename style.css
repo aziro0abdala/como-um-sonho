@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Lilita+One&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bungee", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(victoria.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    width: 350px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    color: #ffffff;  
+    font-family: "Lilita One", sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+backdrop-filter: blur(2px);
+}
+
+.container h1 {
+    font-size: 45px;
+    text-align: center;
+    color: rgb(255, 51, 197);
+}
+
+.input-box {
+    position: relative;
+    margin: 20px 0;
+    width: 100%;
+    height: 50px;
+}
+
+.input-box input {
+    width: 70%;
+    height: 85%;
+    padding: 10px 30px 10px 10px;
+    border: none;
+    outline: none;
+    border-radius: 35px;
+    color: #000000;
+    font-size: 15px;
+}
+
+.input-box input::placeholder {
+    color: #fd0ca0;
+}
+#cadeado {
+    font-size: 20px;
+    position: absolute;
+    right: 60px;
+    top: 20%;
+    color: #111111;
+}
+#olhomagico {
+    font-size: 25px;
+    position: absolute;
+    right: 20px;
+    top: 18%;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+
+.entrar-lembre button {
+    background: linear-gradient(90deg, #fd0ca0 0%, #ff3365 100%);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 30px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.entrar-lembre button:hover {
+    background: linear-gradient(90deg, #f88aa6 0%, #fd0ca0 100%);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: 0.8s;
+
+}

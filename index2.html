@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style2.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>tudo nosso</title>
+
+  </style>
+  </head>
+<body>
+  
+  <div class="flex-container conteudo">
+    <h1>💖 Nosso Tempo Juntos 💖</h1>
+
+    <div class="audio-controls">
+      <button id="musica-anterior">&#8592;</button>
+      <audio id="player" controls>
+        <source id="audio-source" src="careless whispers.mp3" type="audio/mp3">
+        Seu navegador não suporta áudio.
+      </audio>
+      <button id="musica-proxima">&#8594;</button>
+    </div>
+
+    <div class="galeria">
+  <img id="imagem-galeria" src="imagem1.jpg" alt="Foto">
+  <div class="botoes-galeria">
+    <button class="seta" id="anterior">◀ Anterior</button>
+    <button class="seta" id="proximo">Próximo ▶</button>
+  </div>
+</div>
+    <div id="contador"></div>
+
+
+</div>
+  <div class="mensagem">
+    
+  Nos encontramos por acaso, como quem tropeça no destino...
+No começo, éramos apenas dois corações se conhecendo, sem imaginar o quanto ficaríamos próximos.
+Com o tempo, aquela amizade simples foi crescendo, se tornando algo mais forte, mais bonito, mais verdadeiro.
+<br>
+Entre conversas, sorrisos e momentos compartilhados, nasceu em mim o desejo de estar ao seu lado — de te ter por perto, de cuidar de você, de te amar.
+Você trouxe alegria para minha vida, leveza para os meus dias e um amor que só cresce a cada instante.
+<br>
+Sei que juntos ainda vamos viver tantas coisas lindas...
+Acredito em nós, no que estamos construindo, e no que ainda vamos viver.
+Nós vamos ser um grande casal, pode apostar.
+<br>
+Eu te amo, Victória. Meu amor, minha paz, meu futuro.
+
+</div>
+
+  <script>
+const imagens = [
+ "imagem1.jpg",
+  "imagem2.jpg",
+  "imagem3.jpg",
+  "imagem4.jpg",
+  "imagem5.jpg",
+  "imagem6.jpg",
+  "imagem7.jpg",
+  "imagem8.jpg",
+  "imagem9.jpg",
+  "imagem10.jpg",
+
+];
+let indice = 0;
+const img = document.getElementById("imagem-galeria");
+const anterior = document.getElementById("anterior");
+const proximo = document.getElementById("proximo");
+const contador = document.getElementById("contador");
+
+
+function mostrarImagem(i) {
+  img.src = imagens[i];
+  contador.innerHTML = `${i + 1} / ${imagens.length}`;
+}
+
+anterior.onclick = () => {
+  indice = (indice - 1 + imagens.length) % imagens.length;
+  mostrarImagem(indice);
+};
+
+proximo.onclick = () => {
+  indice = (indice + 1) % imagens.length;
+  mostrarImagem(indice);
+};
+
+// Slide automático a cada 7 segundos
+setInterval(() => {
+  indice = (indice + 1) % imagens.length;
+  mostrarImagem(indice);
+}, 9000);
+
+// Inicializa o contador
+contador.innerHTML = `1 / ${imagens.length}`;
+
+// Contador desde 22 de julho
+function atualizarContador() {
+  const inicio = new Date('2025-07-22T00:00:00');
+  const agora = new Date();
+  const diff = agora - inicio;
+
+  const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const minutos = Math.floor((diff / (1000 * 60)) % 60);
+  const segundos = Math.floor((diff / 1000) % 60);
+
+  document.getElementById('contador').innerHTML =
+    `⏳ ${dias} dias, ${horas} horas, ${minutos} minutos, ${segundos} segundos juntos!`;
+}
+
+setInterval(atualizarContador, 1000);
+atualizarContador();
+
+const musicas = [
+  "careless whispers.mp3",
+  "aindabem.mp3",
+  "thinkingoutloud.mp3",
+  "allofme.mp3",
+  "todoteu.mp3"
+];
+let musicaAtual = 0;
+const player = document.getElementById('player');
+const audioSource = document.getElementById('audio-source');
+
+function trocarMusica(index) {
+  audioSource.src = musicas[index];
+  player.load();
+  player.play();
+}
+
+document.getElementById('musica-anterior').onclick = () => {
+  musicaAtual = (musicaAtual - 1 + musicas.length) % musicas.length;
+  trocarMusica(musicaAtual);
+};
+
+document.getElementById('musica-proxima').onclick = () => {
+  musicaAtual = (musicaAtual + 1) % musicas.length;
+  trocarMusica(musicaAtual);
+};
+</script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom right, #ec90b0, #ff5367 ,#fee65e);
+  min-height: 100vh;
+  
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+}
+
+
+.conteudo {
+  text-align: center;
+  gap: 20px;
+}
+
+.galeria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.galeria img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.galeria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#imagem-galeria {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.botoes-galeria {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.botoes-galeria button {
+  padding: 10px 20px;
+  background-color: #fe9296;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.botoes-galeria button:hover {
+  background-color: #e57b84;
+}
+
+.audio-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.audio-controls button {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+  color: #fe9296;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #0002;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.audio-controls button:hover {
+  background: #fe9296;
+  color: #fff;
+}
+.mensagem {
+  max-width: 550px;
+  margin: 30px auto;
+  padding: 30px;
+  color: white;
+  font-size: 18px;
+  font-family:Dancing Script, cursive;
+  text-align: center;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #41194f 0%, #ff3e58 99%, #ff032d 100%);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  /* Fundo com imagem das flores */
+
+  background-size: cover; /* ajusta a imagem para cobrir toda a div */
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Fundo sólido atrás do texto */
+  background-color: rgb(74, 40, 95); /* escurece para destacar o texto */
+  border-radius: 15px;
+  
+}

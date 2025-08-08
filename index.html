@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>bem vinda</title>
+</head>
+<body>
+
+  <main class="container">
+    <form>
+      <h1>Te Amo</h1>
+      <div class="input-box">
+        <input placeholder="senha" type="password" id="senha" required onkeydown="if(event.key===
+        'Enter'){verificarSenha();}">
+        <i class="bx bxs-lock-alt" id="cadeado"></i>
+        <i class="bx bx-show" id="olhomagico"></i>
+      </div>
+      <p id="erro"></p>
+      <div class="entrar-lembre">
+        <label>
+          <input type="checkbox">
+          Lembre-me
+        </label>
+        <button type="button" onclick="verificarSenha()">Entrar</button>
+      </div>
+    </form>
+  </main>
+
+  <script>
+    function verificarSenha() {
+      const senha = document.getElementById("senha").value;
+      if (senha === "somosum") {
+        window.location.href = "index2.html"; // Redireciona para index2.html
+      } else {
+        document.getElementById("erro").innerText = "Senha incorreta!";
+      }
+    }
+    const senhaInput = document.getElementById('senha');
+const toggleSenha = document.getElementById('olhomagico');
+
+toggleSenha.addEventListener('click', () => {
+  if (senhaInput.type === "password") {
+    senhaInput.type = "text";
+    toggleSenha.classList.remove("bx-show");
+    toggleSenha.classList.add("bx-hide");
+  } else {
+    senhaInput.type = "password";
+    toggleSenha.classList.remove("bx-hide");
+    toggleSenha.classList.add("bx-show");
+  }
+});
+  </script>
+</body>
+</html>
